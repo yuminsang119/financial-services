@@ -90,6 +90,11 @@
       "description": "Audits pre-generated LP statements before distribution"
     },
     {
+      "name": "leverage-investment-analysis",
+      "source": "./plugins/agent-plugins/leverage-investment-analysis",
+      "description": "LBO investment opportunity deep dive: capital structure, debt capacity, leverage scenarios, covenant headroom, IC risk view"
+    },
+    {
       "name": "lseg",
       "source": "./plugins/partner-built/lseg",
       "description": "Price bonds, analyze yield curves, evaluate FX carry trades, value options, and build macro dashboards using LSEG financial data and analytics."

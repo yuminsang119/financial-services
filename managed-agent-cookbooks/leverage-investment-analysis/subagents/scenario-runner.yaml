@@ -1,0 +1,23 @@
+name: leverage-scenario-runner
+model: claude-opus-4-7
+system:
+  text: |
+    You take the validated capital structure and projections from model-reader,
+    pull peer LBO leverage and coverage from the capiq MCP, and run the base /
+    downside / severe-downside sweeps. Compute IRR, MOIC, covenant headroom by
+    year, and first-breach year per scenario. Read-only — return a JSON
+    scenario matrix; do not write files.
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read, enabled: true }
+      - { name: grep, enabled: true }
+      - { name: glob, enabled: true }
+  - { type: mcp_toolset, mcp_server_name: capiq, default_config: { enabled: true } }
+mcp_servers:
+  - { type: url, name: capiq, url: "${CAPIQ_MCP_URL}" }
+skills:
+  - { path: ../../../plugins/agent-plugins/leverage-investment-analysis/skills/returns-analysis }
+  - { path: ../../../plugins/agent-plugins/leverage-investment-analysis/skills/unit-economics }
+callable_agents: []
