@@ -16,6 +16,7 @@ Run `../scripts/deploy-managed-agent.sh <slug>` to upload skills, create leaf wo
 | [`valuation-reviewer`](./valuation-reviewer/) | private-equity | Ingests GP packages, runs valuation, stages LP reporting | `Review portco valuations for fund <X> as of <date>` | package-reader · valuation-runner · **publisher** |
 | [`month-end-closer`](./month-end-closer/) | financial-analysis | Accruals, roll-forwards, variance commentary | `Close <entity> for period <YYYY-MM>` | ledger-reader · rollforward · **poster** |
 | [`statement-auditor`](./statement-auditor/) | private-equity | Audits LP statements before distribution | `Tie out statement batch <id> against <fund> NAV pack` | statement-reader · reconciler · **flagger** |
+| [`leverage-investment-analysis`](./leverage-investment-analysis/) | private-equity | LBO model → leverage scenarios, covenant headroom, IC risk view | `Analyze leveraged buyout: <target>, sponsor <sponsor>, financing: {...}` | model-reader · scenario-runner · **memo-writer** |
 
 **Bold** leaf = the only worker with `Write`.
 

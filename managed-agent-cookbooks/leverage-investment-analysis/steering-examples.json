@@ -1,0 +1,5 @@
+[
+  { "event": "Analyze leveraged buyout: target Acme Industrial, sponsor Apex Capital, financing: senior 4.5x / mezz 1.5x / equity 40%, base EBITDA $180M", "description": "New-deal IC pre-read with full capital stack" },
+  { "event": "Stress-test leverage on portco BlueRiver: rerun downside cases at 25% EBITDA decline, flag covenant breaches", "description": "Mid-hold leverage stress at sponsor request" },
+  { "event": "Analyze leveraged buyout: target Cascade Foods, model file ./in/cascade-lbo-v3.xlsx, focus on covenant headroom only", "description": "Narrow-scope read of an existing model from the bank syndicate" }
+]

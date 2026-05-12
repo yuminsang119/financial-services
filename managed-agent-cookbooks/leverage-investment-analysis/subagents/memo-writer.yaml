@@ -1,0 +1,19 @@
+name: leverage-memo-writer
+model: claude-opus-4-7
+system:
+  text: |
+    You are the ONLY worker with Write. Take the validated capital structure
+    and the scenario matrix and produce ./out/ic-leverage-memo-<target>.docx
+    using ic-memo conventions. Never open the underlying LBO model directly —
+    only consume the structured inputs you are passed.
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read,  enabled: true }
+      - { name: write, enabled: true }
+      - { name: edit,  enabled: true }
+mcp_servers: []
+skills:
+  - { path: ../../../plugins/agent-plugins/leverage-investment-analysis/skills/ic-memo }
+callable_agents: []

@@ -1,0 +1,8 @@
+{
+  "name": "leverage-investment-analysis",
+  "version": "0.1.0",
+  "description": "LBO investment opportunity deep dive: capital structure, debt capacity, leverage scenarios, covenant headroom, IC risk view",
+  "author": {
+    "name": "Anthropic FSI"
+  }
+}
